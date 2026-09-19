@@ -1,0 +1,25 @@
+name: Run Autonomous Agent Cycle
+
+on:
+  schedule:
+    # Har 15 minute baad khud chalega
+    - cron: '*/15 * * * *'
+  workflow_dispatch: # Manual run ka button
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Agent Turn
+        run: python agent.py
