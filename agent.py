@@ -104,9 +104,4 @@ def run_trading_cycle():
     return True
 
 if __name__ == "__main__":
-    while True:
-        alive = run_trading_cycle()
-        if not alive:
-            break
-        print(f"Sleeping for 15 minutes...")
-        time.sleep(INTERVAL_SECONDS)
+    run_trading_cycle()
