@@ -5,9 +5,9 @@ from datetime import datetime
 from supabase import create_client
 from google import genai
 
-SUPABASE_URL = "https://drevzwirzmsztttsigih.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRyZXZ6d2lyem1zenR0dHNpZ2loIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4NDI3NjcsImV4cCI6MjEwNTQxODc2N30.Z4F-MsqntciQIwBemN7diROvnrcx95mFx1XRHKYqiww"
-GEMINI_KEY = "AQ.Ab8RN6I5cDm6Xrt1u3SCjv4V9YD7Vt43cqMWOAE67Xo6afliIQ" # <-- Apni Gemini API key yahan paste karein
+SUPABASE_URL = "###############################################"
+SUPABASE_KEY = "#################################################"
+GEMINI_KEY = "AQ.######################" # <-- Apni Gemini API key yahan paste karein
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 ai_client = genai.Client(api_key=GEMINI_KEY)
